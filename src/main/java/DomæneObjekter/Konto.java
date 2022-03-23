@@ -44,12 +44,10 @@ public class Konto
     public int hæv(int i)
     {
 
-
         if (i > 0 && i <= saldo)
         {
             saldo = saldo - i;
         }
-
 
         return saldo;
     }
