@@ -16,10 +16,27 @@
 
 <c:forEach items="${applicationScope.Konti}" var="element">
 
-    ${Kim.value.navn} : ${Kim.value.saldo}
+    ${element.value.navn} : ${element.value.saldo}
     <br>
 
 </c:forEach>
+
+
+
+
+
+<h1>Her kan du logge ind på din konti</h1>
+
+<h1>${requestScope.fejl }</h1>
+
+<form action="ServletLogin">
+    <label for="fname">Navn:</label><br>
+    <input type="text" id="fname" name="navn" value="navn"><br>
+    <label for="lname">Kodeord: </label><br>
+    <input type="password" id="lname" name="kode" value="hemmelig"><br><br>
+    <input type="submit" value="Login">
+</form>
+
 
 
 </body>
